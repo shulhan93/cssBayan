@@ -36,6 +36,7 @@ ul {
     border-top: 1px solid gray;
     list-style: none;
     width: 100%;
+    cursor: pointer;
 }
 
 .bayan-list li label {
@@ -51,18 +52,26 @@ ul {
 }
 
 .bayan:hover label,
-.bayan:hover label::after {
+.bayan:hover label i {
     color: #000;
 }
 
-label:after {
-    content: '+';
+label i {
     color: transparent;
     margin-right: 10px;
     font-size: 28px;
     font-weight: 600;
     transition: all .3s;
 }
+
+.bayan li:hover .content {
+    max-height: 500px;
+}
+
+.bayan li:hover label i {
+    transform: rotate(45deg);
+}
+
 
 input[type="radio"] {
     display: none;
@@ -82,13 +91,12 @@ input[type="radio"] {
 
 .bayan-list input[type="radio"]:checked+label+.content {
     max-height: 500px;
-    /* padding: 10px 10px 20px; */
 }
 
 .bayan-list input[type="radio"]:checked+label {
     color: #000;
 }
 
-.bayan-list input[type="radio"]:checked+label:after {
+.bayan-list input[type="radio"]:checked+label i {
     transform: rotate(45deg);
 }
