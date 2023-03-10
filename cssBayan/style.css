@@ -4,3 +4,91 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #F6F6EC;
+    font-weight: 600;
+}
+
+img {
+    width: 450px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+ul {
+    padding: 0;
+}
+
+.bayan {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bayan:hover label {
+    color: #000;
+}
+
+.bayan-list li {
+    padding: 10px 0;
+    border-top: 1px solid gray;
+    list-style: none;
+    width: 100%;
+}
+
+.bayan-list li label {
+    color: #0059d9;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.bayan:hover label,
+.bayan:hover label::after {
+    color: #000;
+}
+
+label:after {
+    content: '+';
+    color: transparent;
+    margin-right: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.content {
+    text-align: center;
+}
+
+.bayan-list .content {
+    color: #555;
+    padding: 0 10px;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height .4s, padding .4s;
+}
+
+.bayan-list input[type="radio"]:checked+label+.content {
+    max-height: 500px;
+    /* padding: 10px 10px 20px; */
+}
+
+.bayan-list input[type="radio"]:checked+label {
+    color: #000;
+}
+
+.bayan-list input[type="radio"]:checked+label:after {
+    transform: rotate(45deg);
+}
